@@ -10,7 +10,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <h1>Are you an introvert or an extrovert?</h1>
+        <h1 className="h1">Are you an introvert or an extrovert?</h1>
         <Questions />
       </div>
     </QueryClientProvider>
@@ -34,37 +34,72 @@ function Questions() {
     if (optionChoosen[questionIndex] === undefined) {
       return;
     }
-    const nextIndex = questionIndex + 1;
-    if (nextIndex < data.length) {
-      setQuestionIndex(nextIndex);
+    if (hasNextQuestion()) {
+      setQuestionIndex(questionIndex + 1);
     }
   };
 
   const prevQuestion = (e) => {
-    const prevIndex = questionIndex - 1;
-    if (prevIndex >= 0) {
-      setQuestionIndex(prevIndex);
+    if (hasPrevQuestion()) {
+      setQuestionIndex(questionIndex - 1);
     }
   };
 
   function chooseIndex(index) {
-    optionChoosen[questionIndex] = index;
-    setOptionChoosen(optionChoosen);
+    let updatedValue = {};
+    updatedValue[questionIndex] = index;
+    setOptionChoosen((choosen) => ({
+      ...choosen,
+      ...updatedValue,
+    }));  
+  }
+
+  function hasPrevQuestion() {
+    return questionIndex - 1 >= 0;
+  }
+
+  function hasNextQuestion() {
+    return questionIndex + 1 < data.length;
+  }
+  
+  function showFinishTest() {
+    return (questionIndex + 1) === data.length
   }
 
   return (
-    <div>
-      <h4>
-        Question {questionIndex + 1} / {data.length}
-      </h4>
-      <img alt="hero" src="https://www.psychologies.co.uk/wp-content/uploads/sites/3/2018/05/introvert_or_extrovert-1-scaled.jpg?w=1080" className="heroImage"/>
-      <p>{question.question}</p>
+    <div className="questionContainer">
+      <p className="questionCounter">
+        Question {questionIndex + 1}/{data.length}
+      </p>
+      <img
+        alt="hero"
+        src="https://www.psychologies.co.uk/wp-content/uploads/sites/3/2018/05/introvert_or_extrovert-1-scaled.jpg?w=1080"
+        className="heroImage"
+      />
+      <p className="question">{question.question}</p>
       <Options
         options={question.options}
         selectOption={(index) => chooseIndex(index)}
+        selectedOption={optionChoosen[questionIndex]}
       />
-      <button onClick={(e) => prevQuestion()}>Previous Question</button>
-      <button onClick={(e) => nextQuestion()}>Next Question</button>
+      <div className="navContainer">
+        <button
+          className={`navQuestion ${hasPrevQuestion() ? "show" : "hide"}`}
+          onClick={(e) => prevQuestion()}
+        >
+          Previous Question
+        </button>
+        <button
+          className={`navQuestion ${hasNextQuestion() ? "show" : "hide"}`}
+          onClick={(e) => nextQuestion()}>
+          Next Question
+        </button>
+        <button
+          className={`navQuestion ${showFinishTest() ? "show" : "hide"}`}
+          onClick={(e) => nextQuestion()}>
+          Finish Test
+        </button>
+      </div>
     </div>
   );
 }

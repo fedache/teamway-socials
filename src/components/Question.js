@@ -1,15 +1,19 @@
 function Options(props) {
-  let { options, selectOption } = props;
+  let { options, selectOption, selectedOption } = props;
+  console.log(selectedOption)
   return (
-    <select
-      size="4"
-      onChange={(e) => selectOption(e.target.value)}>
+    <div className="qOptions">
       {options.map((option, index) => (
-        <option value={index} key={index}>
+        <button
+          onClick={(e) => selectOption(e.target.dataset.value)}
+          data-value={index}
+          key={index}
+          className={`qOption ${(selectedOption == index) ? "active" : ""}`}
+        >
           {option.text}
-        </option>
+        </button>
       ))}
-    </select>
+    </div>
   );
 }
 export default Options;
