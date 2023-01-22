@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import getQuestionsRequest from "./getQuestionsRequest";
+import { useQuery, QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <h1>Are you an introvert or an extrovert?</h1>
+        <div>
+          <h4>Question</h4>
+        </div>
+        <Questions />
+      </div>
+    </QueryClientProvider>
   );
+}
+
+function Questions() {
+  const { data, error, isLoading } = useQuery(
+    "getQuestions",
+    getQuestionsRequest
+  );
+  if (isLoading) {
+    console.log("Loading...");
+  }
+  if (error) {
+    console.log(error);
+  }
+  console.log(data);
 }
 
 export default App;
