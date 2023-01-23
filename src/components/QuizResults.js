@@ -11,7 +11,6 @@ function QuizResults(props) {
   for (let i = 0; i < questions.length; i++) {
     let question = questions[i];
     let optionIndex = choosenOptions[i];
-    console.log(question.options[optionIndex]);
     let { explain, trait } = question.options[optionIndex];
     explanations.push(explain);
     if (trait == "introvert") {
@@ -24,9 +23,9 @@ function QuizResults(props) {
   if (introvertCount === halfSize) {
     trait = <span>a public introvert and private extrovert</span>;
   } else if (introvertCount > halfSize) {
-    trait = <span>an extrovert</span>;
-  } else {
     trait = <span>an introvert</span>;
+  } else {
+    trait = <span>an extrovert</span>;
   }
 
   return (
