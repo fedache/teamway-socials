@@ -4,19 +4,23 @@
     "options": [
       {
         "text": "Don’t dare to interrupt them",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud"
       },
       {
         "text": "Think it’s more important to give them some of your time; work can wait",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae"
       },
       {
         "text": "Listen, but with only with half an ear",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,"
       },
       {
         "text": "Interrupt and explain that you are really busy at the moment",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet"
       }
     ]
   },
@@ -25,19 +29,23 @@
     "options": [
       {
         "text": "Look at your watch every two minutes",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem"
       },
       {
         "text": "Bubble with inner anger, but keep quiet",
-        "explain": ""
+        "trait": "introvert",
+        "explain": " Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,"
       },
       {
         "text": "Explain to other equally impatient people in the room that the doctor is always running late",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu"
       },
       {
         "text": "Complain in a loud voice, while tapping your foot impatiently",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et "
       }
     ]
   },
@@ -46,19 +54,23 @@
     "options": [
       {
         "text": "Don’t dare contradict them",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga"
       },
       {
         "text": "Think that they are obviously right",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio "
       },
       {
         "text": "Defend your own point of view, tooth and nail",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus"
       },
       {
         "text": "Continuously interrupt your colleague",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae "
       }
     ]
   },
@@ -67,19 +79,23 @@
     "options": [
       {
         "text": "Are a bit too far towards the back so don’t really hear what the guide is saying",
-        "explain": ""
+        "trait": "introvert",
+        "explain": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,"
       },
       {
         "text": "Follow the group without question",
-        "explain": ""
+        "trait": "introvert",
+        "explain": ". Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut"
       },
       {
         "text": "Make sure that everyone is able to hear properly",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis "
       },
       {
         "text": "Are right up the front, adding your own comments in a loud voice",
-        "explain": ""
+        "trait": "extrovert",
+        "explain": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,"
       }
     ]
   }
